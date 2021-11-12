@@ -62,7 +62,7 @@ client.settings.delete(guild.id);
 });
 
 
-/*(client.on("guildMemberAdd", member => {
+(client.on("guildMemberAdd", member => {
   // This executes when a member joins, so let's welcome them!
   // First, ensure the settings exist
   client.settings.ensure(member.guild.id, defaultSettings);
@@ -73,7 +73,7 @@ client.settings.delete(guild.id);
     welcomeMessage = welcomeMessage.replace("{{servername}}", member.guild.name);
   // we'll send to the welcome channel.
   member.guild.channels.find("name", client.settings.get(member.guild.id, "welcomeChannel")).send(welcomeMessage).catch(console.error);
-  });*/
+  });
 
 
 
@@ -100,13 +100,13 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-/*let eventFilter = fs.readdirSync('./events/').filter(x => x.endsWith('.js'));
+let eventFilter = fs.readdirSync('./events/').filter(x => x.endsWith('.js'));
 for (let file of eventFilter) {
     let evt = require('./events/' + file);
     let evtName = file.split('.')[0];
     client.on(evtName, evt.bind(null, client));
     console.log(`[${moment().format('L LTS')}] ${chalk.green('[INFO]')} Loaded event '${evtName}'.`);
-};*/
+};
 
 
 client.commands = new Enmap();
@@ -138,7 +138,7 @@ const args = message.content.split(/\s+/g);
 const command = args.shift().slice(guildConf.prefix.length).toLowerCase();
 if(blacklist.includes(message.author.id)) return message.reply(`You are blacklisted from using DabberBot. Contact our team at support@ddidevelopment.com for more information and appealing.`);
 
-/*
+
 // ill simplify this at some point, atm its just a mess of garbage
   try {
     let commandFile = require(`./commands/${command}.js`);
@@ -151,44 +151,44 @@ if(blacklist.includes(message.author.id)) return message.reply(`You are blacklis
     let commandFile = require(`./commands/moderation/${command}.js`);
     commandFile.run(client, message, args, guildConf);
   } catch (err) {
-     //   console.log(err)
+        console.log(err)
   }
 
   try {
     let commandFile = require(`./commands/developers/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-    //    console.log(err)
+        console.log(err)
   }
 
   try {
     let commandFile = require(`./commands/information/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-    //    console.log(err)
+        console.log(err)
   }
 
   try {
     let commandFile = require(`./commands/fun/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-    //    console.log(err)
+        console.log(err)
   }
 
   try {
     let commandFile = require(`./commands/placeholder/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-    //    console.log(err)
+        console.log(err)
   }
   
     try {
     let commandFile = require(`./commands/serveradmin/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-  //    console.log(err)
+      console.log(err)
   }
-  */
+  
   
   
   
