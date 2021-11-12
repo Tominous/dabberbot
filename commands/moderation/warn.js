@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
 message.channel.send(`/warn is currently disabled due to bugs in the code.`)
-/*const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 exports.run = (client, message, args, user, username) => {
 	const Discord = require('discord.js');
@@ -37,5 +37,5 @@ var addedUser = util.format("%s#%s", message.mentions.users.first().username, me
             });
     });
 };
-*/
+
 }
