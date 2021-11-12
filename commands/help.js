@@ -3,9 +3,9 @@
 const guildConf = {
   "prefix": "/"
 }
-//var modlog = message.guild.channels.find(val => val.name === `${guildConf.modLogChannel}`);
+var modlog = message.guild.channels.find(val => val.name === `${guildConf.modLogChannel}`);
 
- // message.channel.send(`The help commandis currently being re-developed and will be shown later in the beta`);
+  message.channel.send(`The help commandis currently being re-developed and will be shown later in the beta`);
     message.channel.send(`:mailbox_with_mail: ${message.member.user} I have sent you a DM with my commands! `).then(() => {
 		message.author.send(`***Commands:***
 		
