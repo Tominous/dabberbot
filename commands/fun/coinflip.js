@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   const x = Math.floor(Math.random() * 2);
   if (x === 0) {
     
-  //msg.channel.send('<:coin:383756433335779330> Heads!');
+  msg.channel.send('<:coin:383756433335779330> Heads!');
            var heads = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setTitle(`Heads`)
@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
     
   } else {
     
- // msg.channel.send('<:coin:383756433335779330> Tails!');
+  msg.channel.send('<:coin:383756433335779330> Tails!');
        var tails = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setTitle(`Tails`)
