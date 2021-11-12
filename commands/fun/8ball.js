@@ -25,7 +25,7 @@ exports.run = (client, message, args) => {
   "It's possible",
   "Hmm?"];
   message.replytext = Math.floor((Math.random() * replies.length) + 0);
-//return message.reply(replies[message.replytext]);
+return message.reply(replies[message.replytext]);
   
   var question = args.slice(1).join(" ");
   
