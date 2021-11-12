@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
 	.addField("Invite Me", "[CLICK HERE](https://discordapp.com/oauth2/authorize?client_id=239853212444786689&scope=bot&permissions=2146958591)", true)
   .addField("Owner/Dev", "DamonOnYT#5465", true)
   .addField("Developers", "The Doctor#5005 \n ipadpuppydogdude1#1958", true)
- // .addField("Dabberbot Version", "idk", true)
+  .addField("Dabberbot Version", "idk", true)
   .setFooter(`Have Any Suggestions? DM DamonOnYT#5465`)
 	.setColor("#1E90FF");
 		message.channel.send({embed});		
