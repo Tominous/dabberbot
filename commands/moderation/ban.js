@@ -14,7 +14,7 @@ exports.run = (client, message, args, defaultSettings) => {
         
   
 		if(!modlog) return message.reply(`I cannot find a mod-log channel, please make a text channel named ${guildConf.modLogChannel}`).catch(console.error);
-//		if(!user.kickable) return message.reply("I am unable to ban this user. I either dont have the ban members permission or their rank is higher than mine!");
+		if(!user.kickable) return message.reply("I am unable to ban this user. I either dont have the ban members permission or their rank is higher than mine!");
                 user.send(`
         **Ban Warning**
         
